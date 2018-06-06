@@ -1,0 +1,13 @@
+name: cj_shiny_histograms
+title: cj_shiny_histograms
+username:
+account: utrecht-university
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 356176
+bundleId: 1414925
+url: https://utrecht-university.shinyapps.io/cj_shiny_histograms/
+when: 1528296024.60838
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: Shiny Apps idee_2.docx

@@ -1,0 +1,13 @@
+name: cj_shiny_hist
+title: cj_shiny_hist
+username:
+account: utrecht-university
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 351143
+bundleId: 1400472
+url: https://utrecht-university.shinyapps.io/cj_shiny_hist/
+when: 1527687460.66918
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: highcharter_tryout.R|LICENSE|notes.R|README.md|server_old.R
