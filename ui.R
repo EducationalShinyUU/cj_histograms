@@ -8,10 +8,10 @@ uu_color <- " #ffcd00"
 
 ui <- dashboardPage(
   skin = "black",
-  dashboardHeader(title = "Effect size demonstration", titleWidth = 350),
+  dashboardHeader(title = "T-test demonstration", titleWidth = 350),
   dashboardSidebar(width = 350,
                    sidebarMenu(
-                               menuItem("Effect size", tabName = "tab1"),
+                               menuItem("T-test", tabName = "tab1"),
                                 menuItem("Disclaimer", tabName = "Disclaimer"),
                                HTML("<br><br><br><br><br><br><br><br><br><br><br><br><br><br>"),
                                img(src = 'logo.png', align = "left")
@@ -88,7 +88,7 @@ ui <- dashboardPage(
                          h5(
                            "The histograms represent two independent samples. You can manipulate the population means, standard deviation, and sample size to examine what effect this has on the observed mean difference between the two samples."
                          ),
-                         plotOutput("anova_plot"))
+                         plotOutput("anova_plot", width = "600px", height = "400px"))
               ),
               box(
                 checkboxInput("full_ui", "Advanced options", value = FALSE),
@@ -97,7 +97,7 @@ ui <- dashboardPage(
                     condition = "input.full_ui == true",
                     
                     column(2,
-                           h4("Men:"),
+                           h4("Group 1:"),
                            sliderInput("mean1", "Mean:", min = 0, max = 10, value = 5, step = .1, width = 200),
                            sliderInput("sd1", "SD:", min = 0, max = 4, value = 1, step = .1, width = 200),
                            sliderInput("N1", "N:", min = 1, max = 100, value = 10, width = 200),
@@ -105,7 +105,7 @@ ui <- dashboardPage(
                            #actionButton("scale_dat", "Update mean and SD", width = 200)
                            ),
                     column(2,
-                           h4("Women"),
+                           h4("Group 2"),
                            sliderInput("mean2", "Mean:", min = 0, max = 10, value = 5, step = .1,width = 200),
                            sliderInput("sd2", "SD:", min = 0, max = 4, value = 1, step = .1, width = 200),
                            sliderInput("N2", "N:", min = 1, max = 100, value = 10, width = 200)
@@ -119,7 +119,7 @@ ui <- dashboardPage(
                            
                            sliderInput("diff", "Difference:", min = -10, max = 10, value = 0, step = .1, width = 400),
                            sliderInput("sd_overall", "SD:", min = 0, max = 4, value = 1, step = .1, width = 400),
-                           sliderInput("N_overall", "N:", min = 1, max = 100, value = 10, width = 400),
+                           sliderInput("N_overall", "Total N (divided equally into two groups):", min = 1, max = 100, value = 20, width = 400),
                            actionButton("resample_dat2", "New sample", width = 200)
                     )
                   )

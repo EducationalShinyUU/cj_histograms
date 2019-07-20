@@ -1,0 +1,13 @@
+name: t_test
+title: t_test
+username:
+account: utrecht-university
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 376725
+bundleId: 1482214
+url: https://utrecht-university.shinyapps.io/t_test/
+when: 1531734874.3775
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: data_shoe_0caeb1744e23127c490c7808b8b63b73.dat|Mplus Run Models.log|Shiny Apps idee_2.docx|tmp.txt
